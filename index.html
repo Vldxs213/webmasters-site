@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="uk">
 <head>
@@ -115,3 +116,133 @@
   </footer>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebMasters — Преміальний сайт</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .menu-toggle span {
+      background: white;
+      height: 3px;
+      width: 25px;
+      margin: 4px 0;
+      transition: 0.3s;
+    }
+    @media (max-width: 768px) {
+      nav div:last-child {
+        display: none;
+        flex-direction: column;
+        background: #1f2937;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      nav div:last-child a {
+        margin: 10px 0;
+      }
+      .menu-toggle {
+        display: flex;
+      }
+      nav.active div:last-child {
+        display: flex;
+      }
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('header nav');
+      toggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <div><strong>WebMasters</strong></div>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div>
+        <a href="#">Головна</a>
+        <a href="#services">Послуги</a>
+        <a href="#team">Команда</a>
+        <a href="#contact">Контакти</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Створюємо сайти нового покоління</h1>
+    <p>Розробка. Дизайн. Оптимізація. Усе під ключ.</p>
+    <a href="#contact" class="btn">Замовити консультацію</a>
+  </section>
+
+  <section class="section" id="services">
+    <h2>Наші послуги</h2>
+    <img src="images/services-icons.jpg" alt="Послуги" style="width:100%; border-radius:8px; margin-bottom:20px;">
+    <div class="features">
+      <div class="feature">
+        <h3>Адаптивний дизайн</h3>
+        <p>Сайт буде виглядати ідеально на телефоні, планшеті й ПК.</p>
+      </div>
+      <div class="feature">
+        <h3>Швидке завантаження</h3>
+        <p>Миттєва реакція та мінімальна затримка для користувача.</p>
+      </div>
+      <div class="feature">
+        <h3>SEO просування</h3>
+        <p>Ваш сайт з’явиться в Google серед топових конкурентів.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="team">
+    <h2>Наша команда</h2>
+    <div class="features">
+      <div class="feature">
+        <img src="images/team1.jpg" alt="Ірина" class="avatar">
+        <h3>Ірина</h3>
+        <p>Front-end розробниця</p>
+      </div>
+      <div class="feature">
+        <img src="images/team2.jpg" alt="Олексій" class="avatar">
+        <h3>Олексій</h3>
+        <p>Back-end розробник</p>
+      </div>
+      <div class="feature">
+        <img src="images/team3.jpg" alt="Марія" class="avatar">
+        <h3>Марія</h3>
+        <p>UI/UX дизайнерка</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Контакти</h2>
+    <img src="images/contact-office.jpg" alt="Офіс" style="width:100%; border-radius:8px; margin-bottom:20px;">
+    <p style="text-align:center;">Напишіть нам: <a href="mailto:info@webmasters.ua">info@webmasters.ua</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 WebMasters. Всі права захищені.</p>
+  </footer>
+</body>
+</html>
+>>>>>>> 091d36e4c370a72d73b35e64336b16c601727680
