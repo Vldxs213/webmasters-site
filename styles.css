@@ -59,6 +59,46 @@ nav a:hover::after {
   width: 100%;
 }
 
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  background: white;
+  height: 3px;
+  width: 25px;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  nav div:last-child {
+    display: none;
+    flex-direction: column;
+    background: #1f2937;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  nav div:last-child a {
+    margin: 10px 0;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav.active div:last-child {
+    display: flex;
+  }
+}
+
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
               url('images/hero-premium.jpg') no-repeat center/cover;
@@ -75,7 +115,6 @@ nav a:hover::after {
 .hero h1 {
   font-size: 3.2rem;
   margin-bottom: 10px;
-  animation: slideUp 1s ease-in;
 }
 
 .btn {
@@ -138,7 +177,7 @@ nav a:hover::after {
 }
 
 .feature:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
 }
 
 .feature h3 {
@@ -155,6 +194,31 @@ nav a:hover::after {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.portfolio-item {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-6px);
+}
+
+.portfolio-item img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
 footer {
   background: var(--color-dark);
   color: var(--color-white);
@@ -164,13 +228,7 @@ footer {
   box-shadow: inset 0 5px 10px rgba(0,0,0,0.2);
 }
 
-/* 🔁 Анімації */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slideUp {
-  from { transform: translateY(20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
 }

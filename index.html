@@ -5,42 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WebMasters — Преміальний сайт</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    .menu-toggle {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-    .menu-toggle span {
-      background: white;
-      height: 3px;
-      width: 25px;
-      margin: 4px 0;
-      transition: 0.3s;
-    }
-    @media (max-width: 768px) {
-      nav div:last-child {
-        display: none;
-        flex-direction: column;
-        background: #1f2937;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        width: 200px;
-        padding: 20px;
-        border-radius: 10px;
-      }
-      nav div:last-child a {
-        margin: 10px 0;
-      }
-      .menu-toggle {
-        display: flex;
-      }
-      nav.active div:last-child {
-        display: flex;
-      }
-    }
-  </style>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const toggle = document.querySelector('.menu-toggle');
@@ -61,8 +25,10 @@
         <span></span>
       </div>
       <div>
-        <a href="#">Головна</a>
+        <a href="index.html">Головна</a>
         <a href="#services">Послуги</a>
+        <a href="services.html">Послуги детальніше</a>
+        <a href="#portfolio">Роботи</a>
         <a href="#team">Команда</a>
         <a href="#contact">Контакти</a>
       </div>
@@ -77,19 +43,42 @@
 
   <section class="section" id="services">
     <h2>Наші послуги</h2>
-    <img src="images/services-icons.jpg" alt="Послуги" style="width:100%; border-radius:8px; margin-bottom:20px;">
     <div class="features">
       <div class="feature">
-        <h3>Адаптивний дизайн</h3>
-        <p>Сайт буде виглядати ідеально на телефоні, планшеті й ПК.</p>
+        <img src="images/service-dev.jpg" alt="Розробка" class="avatar">
+        <h3>Розробка</h3>
+        <p>Сучасна HTML/CSS-верстка з адаптивністю та швидким завантаженням.</p>
       </div>
       <div class="feature">
-        <h3>Швидке завантаження</h3>
-        <p>Миттєва реакція та мінімальна затримка для користувача.</p>
+        <img src="images/service-design.jpg" alt="Дизайн" class="avatar">
+        <h3>Дизайн</h3>
+        <p>UI/UX-дизайн з акцентом на зручність і стиль для будь-якого проєкту.</p>
       </div>
       <div class="feature">
-        <h3>SEO просування</h3>
-        <p>Ваш сайт з’явиться в Google серед топових конкурентів.</p>
+        <img src="images/service-seo.jpg" alt="SEO" class="avatar">
+        <h3>SEO</h3>
+        <p>Пошукова оптимізація сайту для високих позицій у Google.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="portfolio">
+    <h2>Наші роботи</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="images/portfolio1.jpg" alt="Сайт 1">
+        <h3>Landing Page</h3>
+        <p>Односторінковий сайт для бізнесу з адаптивною версткою.</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/portfolio2.jpg" alt="Сайт 2">
+        <h3>Корпоративний сайт</h3>
+        <p>Сучасний сайт для компанії з каталогом послуг.</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/portfolio3.jpg" alt="Сайт 3">
+        <h3>Інтернет-магазин</h3>
+        <p>Повноцінний магазин з картками товарів і кошиком.</p>
       </div>
     </div>
   </section>
