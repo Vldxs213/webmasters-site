@@ -5,17 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Послуги WebMasters</title>
   <link rel="stylesheet" href="styles.css" />
+  <script src="scripts.js" defer></script>
 </head>
 <body>
   <header>
-    <nav>
-      <div><strong>WebMasters</strong></div>
-      <div class="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div>
+    <nav class="main-nav">
+      <div class="logo"><strong>WebMasters</strong></div>
+      <div class="menu-toggle"><span></span><span></span><span></span></div>
+      <div class="nav-links">
         <a href="index.html">Головна</a>
         <a href="services.html">Послуги детальніше</a>
       </div>
@@ -23,40 +20,29 @@
   </header>
 
   <section class="section">
-    <h2>Детальніше про наші послуги</h2>
-    <p style="text-align:center; max-width: 800px; margin: auto; margin-bottom: 40px;">
-      Ми створюємо сайти будь-якого рівня складності — від односторінкових лендінгів до повноцінних інтернет-магазинів.
-      Кожен проєкт — це індивідуальний підхід, глибоке розуміння задачі та сучасні технології.
+    <h2>Деталі наших послуг</h2>
+    <p class="intro">
+      Ми пропонуємо повний комплекс веб-послуг: від концепції до підтримки.
     </p>
-
     <div class="features">
       <div class="feature">
         <img src="images/service-dev.jpg" alt="Розробка" class="avatar">
         <h3>Розробка сайтів</h3>
-        <p>
-          Верстка з нуля, адаптивна структура, кросбраузерність. Пишемо чистий і валідний HTML/CSS-код,
-          оптимізований для швидкого завантаження та подальшого розвитку.
-        </p>
+        <p>Чиста верстка, адаптивний дизайн та SEO-френдлі структура.</p>
       </div>
       <div class="feature">
         <img src="images/service-design.jpg" alt="Дизайн" class="avatar">
-        <h3>Дизайн та UX/UI</h3>
-        <p>
-          Ми створюємо візуально привабливі та зручні інтерфейси. Дотримуємось трендів,
-          але при цьому зберігаємо індивідуальний стиль. Кожен макет тестується на реальних користувачах.
-        </p>
+        <h3>UI/UX дизайн</h3>
+        <p>Інтуїтивні інтерфейси, прототипування та тестування.</p>
       </div>
       <div class="feature">
         <img src="images/service-seo.jpg" alt="SEO" class="avatar">
         <h3>SEO-оптимізація</h3>
-        <p>
-          Ваш сайт буде не просто красивим — він буде видимим для пошукових систем.
-          Ми прописуємо мета-теги, оптимізуємо контент, структуру URL, додаємо адаптивні елементи.
-        </p>
+        <p>Технічне SEO, дослідження ключових слів, підвищення видимості.</p>
       </div>
     </div>
 
-    <div style="text-align:center; margin-top:50px;">
+    <div class="back-btn">
       <a href="index.html" class="btn">Повернутись на головну</a>
     </div>
   </section>
